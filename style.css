@@ -114,3 +114,45 @@ max-width: 97%;
     font-size: 12px;
     color: white;
     }
+
+@media only screen and (max-width: 768px){
+.container{
+grid-template-areas: "header" "nav" "article" "footer";
+grid-template-columns: 1fr;
+grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+}
+.title{
+    font-size: 40px;
+    }
+.sub_title{
+ font-size: 15px;
+  }
+nav{
+grid-area: nav;
+display: grid; 
+grid-template-columns: repeat(4, 1fr);
+}
+nav .container_categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+.ads{
+display: none;
+}
+article{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-gap: 1%;
+}
+article .cart{
+margin: 1%;     
+}
+.small_text{
+font-size: 9px;
+}
+footer{
+flex-direction: column;
+}
+}
